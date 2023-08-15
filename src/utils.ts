@@ -2,7 +2,7 @@
  * @Author: Luzy
  * @Date: 2023-08-10 21:29:36
  * @LastEditors: Luzy
- * @LastEditTime: 2023-08-11 16:20:02
+ * @LastEditTime: 2023-08-15 16:01:51
  * @Description: 工具函数集
  */
 /**
@@ -35,6 +35,9 @@ export function compose(middlewares: any[]) {
  * @param {string} data fetch响应体text
  */
 export function safeJsonParse(data: string) {
+
+    if (!data) return ""
+
     try {
         return JSON.parse(data);
     } catch (e: any) {
