@@ -2,7 +2,7 @@
  * @Author: Luzy
  * @Date: 2023-08-10 14:22:08
  * @LastEditors: Luzy
- * @LastEditTime: 2023-08-11 16:23:03
+ * @LastEditTime: 2023-08-15 15:03:54
  * @Description: 外层工厂函数 用于创建可使用的Fetch对象
  */
 
@@ -16,14 +16,14 @@ type FinalResponse = {
 interface Fetch {
     cancel(): void
 
-    get(): FinalResponse
-    post(): FinalResponse
-    delete(): FinalResponse
-    put(): FinalResponse
-    patch(): FinalResponse
-    head(): FinalResponse
-    options(): FinalResponse
-    rpc(): FinalResponse
+    get(url: string, options: any): Promise<FinalResponse>
+    post(url: string, options: any): Promise<FinalResponse>
+    delete(url: string, options: any): Promise<FinalResponse>
+    put(url: string, options: any): Promise<FinalResponse>
+    patch(url: string, options: any): Promise<FinalResponse>
+    head(url: string, options: any): Promise<FinalResponse>
+    options(url: string, options: any): Promise<FinalResponse>
+    rpc(url: string, options: any): Promise<FinalResponse>
 }
 
 
