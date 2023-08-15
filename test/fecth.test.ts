@@ -2,16 +2,12 @@
  * @Author: Luzy
  * @Date: 2023-08-15 14:18:39
  * @LastEditors: Luzy
- * @LastEditTime: 2023-08-15 16:07:56
- * @Description: 
+ * @LastEditTime: 2023-08-15 16:17:54
+ * @Description: Fecth module模块测试
+ *  // !启动前需要运行server.js以启动测试用服务器
  */
 
 import Fetch from "../src/Fetch";
-
-
-function sum(a: number, b: number) {
-    return a + b;
-}
 
 
 // 模拟网络请求数据
@@ -20,7 +16,6 @@ const headers = { "Content-Type": "application/json" }
 
 // 外层请求模块测试
 describe('Fecth module', () => {
-
 
     const testRes = (res: any) => {
         expect(res.status).toBe(200)
